@@ -23,5 +23,4 @@ export interface ImageData {
     modified: Date
     generator: string
     items: Item[]
-    children?: ReactNode
 }
