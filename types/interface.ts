@@ -1,7 +1,21 @@
-import { ReactNode } from 'react'
+export interface ImageData {
+    next: Next
+    results: Results
+}
 
-export interface Media {
-    m: string
+export interface Next {
+    page: number
+    limit: number
+    itemsLength: number
+}
+
+export interface Results {
+    title: string
+    link: string
+    description: string
+    modified: Date
+    generator: string
+    items: Item[]
 }
 
 export interface Item {
@@ -16,11 +30,6 @@ export interface Item {
     tags: string
 }
 
-export interface ImageData {
-    title: string
-    link: string
-    description: string
-    modified: Date
-    generator: string
-    items: Item[]
+export interface Media {
+    m: string
 }
