@@ -1,11 +1,14 @@
 export interface ImageData {
-    next: Next
+    meta: Meta
     results: Results
 }
 
-export interface Next {
+export interface Meta {
     page: number
     limit: number
+    totalPage: number
+    next: number | null
+    previous: number | null
     itemsLength: number
 }
 
