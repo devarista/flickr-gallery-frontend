@@ -21,7 +21,7 @@ const Home = (props: { images: ImageData }) => {
 
     useEffect(() => {
         const getImagesWithTags = async () => {
-            const { data } = await axios.get(`${process.env.NEXT_PUBLIC_URL}/image?tags=${debouncedSearch}&page=${page}`)
+            const { data } = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/image?tags=${debouncedSearch}&page=${page}`)
             return setImageData(data)
         }
 
@@ -72,7 +72,7 @@ const Home = (props: { images: ImageData }) => {
 export default Home
 
 export const getServerSideProps: GetServerSideProps = async () => {
-    const { data } = await axios.get<ImageData>(`${process.env.NEXT_PUBLIC_URL}/image`)
+    const { data } = await axios.get<ImageData>(`${process.env.NEXT_PUBLIC_API_URL}/image`)
     return {
         props: {
             images: data,
