@@ -16,7 +16,7 @@ export interface Results {
     title: string
     link: string
     description: string
-    modified: Date
+    modified: string
     generator: string
     items: Item[]
 }
@@ -25,9 +25,9 @@ export interface Item {
     title: string
     link: string
     media: Media
-    date_taken: Date
+    date_taken: string
     description: string
-    published: Date
+    published: string
     author: string
     author_id: string
     tags: string
