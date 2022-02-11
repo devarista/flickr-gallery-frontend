@@ -9,6 +9,7 @@ const SearchInput = () => {
             <div className='mt-1 flex rounded-md shadow-sm w-full'>
                 <span className='inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm'>Search by Tags</span>
                 <input
+                    role='search'
                     type='search'
                     onChange={(e) => {
                         setTags(e.target.value)

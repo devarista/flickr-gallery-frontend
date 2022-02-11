@@ -12,14 +12,15 @@ const ImageLists = ({ meta, results }: ImageData) => {
     return (
         <div>
             {meta.itemsLength === 0 && (
-                <div className='w-full h-full flex items-center justify-center'>
+                <div className='w-full h-full flex items-center justify-center' role='emptyImageList'>
                     <p className='text-4xl font-bold text-red-600'>Image not Found</p>
                 </div>
             )}
             {meta.itemsLength > 0 && (
-                <main className='w-full grid grid-cols-3 gap-4'>
+                <div className='w-full grid grid-cols-3 gap-4' role='imageList'>
                     {results.items.map((item: Item, index: number) => (
                         <div
+                            role={item.title}
                             onClick={() => {
                                 setSelectedImage(item)
                                 setOpen(true)
@@ -44,7 +45,7 @@ const ImageLists = ({ meta, results }: ImageData) => {
                             </div>
                         </div>
                     ))}
-                </main>
+                </div>
             )}
         </div>
     )

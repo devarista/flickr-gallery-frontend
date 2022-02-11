@@ -41,10 +41,10 @@ const Home = (props: { images: ImageData }) => {
             </Head>
             <div className='container mx-auto min-h-screen max-h-screen px-72 py-6 flex flex-col space-y-5'>
                 {/* Title */}
-                <div className='text-6xl font-bold text-indigo-800'>
+                <h1 className='text-6xl font-bold text-indigo-800'>
                     <span className='text-4xl font-normal'>is</span>
                     <span>Flickr</span> <span className='font-normal italic'>Gallery?</span>
-                </div>
+                </h1>
 
                 {/* Search Input */}
                 <SearchInput />

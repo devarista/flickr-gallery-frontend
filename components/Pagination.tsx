@@ -6,8 +6,9 @@ import { ImageData, Meta } from '../types/imageDataInterface'
 const Pagination = ({ meta }: ImageData) => {
     const [page, setPage] = useRecoilState(paginationState)
     return (
-        <div className='w-full flex space-x-4 items-center justify-center'>
+        <div className='w-full flex space-x-4 items-center justify-center' role='pagination'>
             <button
+                role='previousPaginationButton'
                 disabled={meta.previous === null && true}
                 className='rounded px-4 py-2 disabled:bg-slate-400 disabled:text-slate-500 disabled:cursor-not-allowed hover:bg-indigo-600 bg-indigo-500 text-slate-200'
                 onClick={() => {
@@ -17,6 +18,7 @@ const Pagination = ({ meta }: ImageData) => {
                 Previous
             </button>
             <button
+                role='nextPaginationButton'
                 disabled={meta.next === null && true}
                 className='rounded px-4 py-2 disabled:bg-slate-400 disabled:text-slate-500 disabled:cursor-not-allowed hover:bg-indigo-600 bg-indigo-500 text-slate-200'
                 onClick={() => {
