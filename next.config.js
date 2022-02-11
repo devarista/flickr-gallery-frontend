@@ -4,6 +4,9 @@ const nextConfig = {
     images: {
         domains: ['live.staticflickr.com'],
     },
+    typescript: {
+        ignoreBuildErrors: true,
+    },
 }
 
 module.exports = nextConfig
